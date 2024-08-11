@@ -1,0 +1,75 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    color: white;
+    background-image: url(images/istockphoto-1160542809-612x612.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 5rem;
+    backdrop-filter: blur(12px); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2em;
+    color: transparent;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #333;
+}
+
+.cell.X::before {
+    content: "X";
+    color: blue;
+    font-weight: bold;
+}
+
+.cell.O::before {
+    content: "O";
+    color: yellow;
+    font-weight: bold;
+}
+
+#restartBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #61dafb;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#restartBtn:hover {
+    background-color: #21a1f1;
+    transform: scale(1.1);
+}
